@@ -1,0 +1,26 @@
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. MOVEPRGM.
+       AUTHOR.JU.
+
+       DATA DIVISION.
+       WORKING-STORAGE SECTION.
+
+       01 WS-EMP-ID       PIC 9(5) VALUE 12345.
+       01 WS-NEW-ID       PIC 9(5).
+       01 WS-SALARY       PIC 9(6) VALUE 50000.
+       01 WS-NEW-SALARY   PIC 9(6).
+
+       PROCEDURE DIVISION.
+
+           DISPLAY "BEFORE MOVE"
+           DISPLAY "EMP ID: " WS-EMP-ID
+           DISPLAY "SALARY: " WS-SALARY
+
+           MOVE WS-EMP-ID TO WS-NEW-ID
+           MOVE WS-SALARY TO WS-NEW-SALARY
+
+           DISPLAY "AFTER MOVE"
+           DISPLAY "NEW ID: " WS-NEW-ID
+           DISPLAY "NEW SALARY: " WS-NEW-SALARY
+
+           STOP RUN.
